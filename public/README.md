@@ -1,106 +1,148 @@
 # Kjerneverk
 
-**Core tools for AI-assisted development workflows**
+**Structured formats for working with generative AI**
 
-Kjerneverk (Norwegian for "core work") is a collection of interconnected tools designed to enhance AI-assisted development through structured prompts, long-running plans, and intelligent document creation.
+Kjerneverk (Norwegian for "core work") provides structured formats that give you control over your prompts, plans, and documents. Move away from freeform prompts, unstructured plans, and documents generated without your input. Take back control over what you send to models and what you get back.
 
-## Projects
+> **"The thing is bigger than just the thing."**  
+> A prompt isn't just text. A plan isn't just tasks. A document isn't just output.  
+> They're processes, lifecycles, and ways of thinking.
 
-### RiotPlan
+[Read the full vision →](../VISION.md) | [Core message →](../CORE-MESSAGE.md) | [Glossary →](../GLOSSARY.md)
 
-**Framework for long-lived, stateful AI workflows**
+## Why Kjerneverk?
 
-RiotPlan helps you manage complex, multi-step AI-assisted tasks that span multiple sessions. It provides structure for work that can't be done in one sitting, with persistent state tracking and step-by-step execution.
+### The Problem
 
-**Key Features:**
-- Multi-session workflow management
-- Persistent state tracking with STATUS.md
-- Organized step-by-step execution
-- AI-powered plan generation
-- MCP server integration for AI assistants
+Large language models generate content that **"hits the mark, but not quite."** They're excellent at pattern-matching from training data, but the outputs aren't truly *yours*. They don't capture your thinking, your research, your unique context.
 
-**Links:**
-- [Documentation](https://kjerneverk.github.io/riotplan/)
-- [GitHub Repository](https://github.com/kjerneverk/riotplan)
-- [npm Package](https://www.npmjs.com/package/@riotprompt/riotplan)
+Meanwhile, we're distracted by which model to use, which IDE to work in, which tool has the best features. But as models improve, **the specific tool matters less**. What matters is your **process**.
 
-**Installation:**
-```bash
-npm install -g @riotprompt/riotplan
-```
+### The Solution
 
----
+Kjerneverk provides **constructs**—structured formats that encompass more than just artifacts:
 
-### RiotPrompt
+- **Prompts** that evolve over time, work across models, and maintain history
+- **Plans** with full lifecycle from idea exploration through execution
+- **Documents** that capture the construction of meaning, not just output
 
-**Structured prompt building library and CLI**
+These aren't just better formats. They're **ways of working** that give you control and ownership over your AI-assisted workflows.
 
-RiotPrompt treats prompts as code with specialized sections, advanced strategies, and automatic model alignment. It provides a powerful foundation for building AI applications with zero hardcoded assumptions.
+## The Three Constructs
 
-**Key Features:**
-- Structured prompt composition (Persona, Instructions, Context)
-- Advanced prompt strategies (Constraints, Few-Shot Examples, Reasoning)
-- Automatic model alignment (Anthropic, OpenAI, Gemini)
-- CLI for prompt management and execution
-- MCP server for AI assistant integration
-- Full TypeScript support
+### [RiotPrompt](./riotprompt.md): Prompts as Constructs
 
-**Links:**
-- [Documentation](https://kjerneverk.github.io/riotprompt/)
-- [GitHub Repository](https://github.com/kjerneverk/riotprompt)
-- [npm Package](https://www.npmjs.com/package/@riotprompt/riotprompt)
+**A prompt is bigger than the text you send to an LLM.**
 
-**Installation:**
+**Before RiotPrompt**: Freeform text blocks. Rewritten for each model. No history or evolution.
+
+**With RiotPrompt**: Structured prompts with persona, instructions, context, and constraints. Write once, translate automatically to OpenAI (Markdown sections), Anthropic (XML tags), or Gemini (rich sections). Track revisions. Support experimentation.
+
+**Tool Independence**: Works from CLI with API keys, via MCP with any model, or as a library in your applications.
+
 ```bash
 npm install @riotprompt/riotprompt
 ```
 
+[Learn more about RiotPrompt →](./riotprompt.md) | [Documentation](https://kjerneverk.github.io/riotprompt/)
+
 ---
 
-### RiotDoc
+### [RiotPlan](./riotplan.md): Plans as Lifecycle
 
-**Template-driven document creation with AI assistance**
+**A plan is bigger than a list of tasks.**
 
-RiotDoc guides you through creating high-quality documents using template-driven workflows, conversational guidance, and full history tracking. It bridges the gap between AI generation and human creativity.
+**Before RiotPlan**: Depending on tools to generate inadequate plans. Markdown files that pile up. Systems like Beads that track issues but don't support deep thinking.
 
-**Key Features:**
-- Template-driven workflows with multiple approaches
-- Conversational guidance (2-5 questions at a time)
-- Full history tracking and version control
-- Checkpoint system for experimentation
-- Varying levels of AI assistance
-- MCP server integration
+**With RiotPlan**: Standard lifecycle from idea exploration (questions, constraints, evidence) through shaping (comparing approaches) to execution (step-by-step with status tracking). Analysis before action. Plans that span multiple sessions.
 
-**Links:**
-- [Documentation](https://kjerneverk.github.io/riotdoc/)
-- [GitHub Repository](https://github.com/kjerneverk/riotdoc)
-- [npm Package](https://www.npmjs.com/package/@riotprompt/riotdoc)
+**Tool Independence**: Works from CLI, via MCP, or through future GUI applications. Use with any model or no model at all.
 
-**Installation:**
+```bash
+npm install -g @riotprompt/riotplan
+```
+
+[Learn more about RiotPlan →](./riotplan.md) | [Documentation](https://kjerneverk.github.io/riotplan/)
+
+---
+
+### [RiotDoc](./riotdoc.md): Documents as Process
+
+**A document is bigger than its output.**
+
+**Before RiotDoc**: Fire up Word and start typing. Or ask an LLM to generate something "close enough."
+
+**With RiotDoc**: Documents that capture the construction of meaning—research, evidence, audience analysis, conversation history. Like academic papers show their recipe, all documents track their creation process.
+
+**Tool Independence**: Template-driven workflows that work with any model. Full history tracking. Version control from draft to publication.
+
 ```bash
 npm install -g @riotprompt/riotdoc
 ```
 
+[Learn more about RiotDoc →](./riotdoc.md) | [Documentation](https://kjerneverk.github.io/riotdoc/)
+
 ---
 
-## Philosophy
+## Core Principles
 
-The Kjerneverk tools share a common philosophy:
+### 1. Tool Independence
 
-1. **Structure over Chaos** - Provide frameworks that bring order to complex AI workflows
-2. **Persistence over Ephemeral** - Track history, state, and evolution over time
-3. **Flexibility over Rigidity** - Support multiple approaches and workflows
-4. **Integration over Isolation** - Work together and with AI assistants via MCP
+Every Kjerneverk construct works:
+- **From the command line** with API keys (OpenAI, Anthropic, Gemini)
+- **Via MCP** with any model attached to your session (Cursor, Claude Desktop)
+- **As a library** in your applications
+- **With or without AI** - the formats are useful even without model assistance
+
+### 2. Control and Ownership
+
+LLMs generate content that's "close enough"—pattern-matched from training data. Kjerneverk gives you **control** over what you send to models and **ownership** over what you get back. Your prompts, plans, and documents are truly *yours*.
+
+### 3. Process Over Tools
+
+As models improve, which specific model you use matters less. What matters is:
+- How you structure your approach
+- How you maintain context and history  
+- How you ensure outputs reflect your thinking
+
+We're too often distracted by tools. Kjerneverk focuses on **process**.
+
+### 4. Embrace Complexity
+
+This is sophisticated work that requires sophisticated thinking. We don't oversimplify. We use words like **ontology**, **metacognitive programming**, **construct** because these are the concepts you're actually working with.
+
+[Read the full philosophy →](../VISION.md)
 
 ## Getting Started
 
-Each tool can be used independently, but they work best together:
+### For Developers
+Integrate Kjerneverk into your applications. Use structured formats that work across any model.
 
-- Use **RiotPrompt** to build structured prompts for your AI interactions
-- Use **RiotPlan** to manage long-running, multi-step AI workflows
-- Use **RiotDoc** to create high-quality documents with AI assistance
+### For Power Users  
+Use the CLI tools with your API keys. Work outside of IDEs with full control.
 
-All tools support the Model Context Protocol (MCP), allowing seamless integration with AI assistants like Cursor and Claude Desktop.
+### For AI Assistant Users
+Install MCP servers in Cursor or Claude Desktop. Let AI assistants manage your prompts, plans, and documents with structure.
+
+### For Everyone
+All tools support multiple ways of working. Start with what's comfortable, expand as needed.
+
+## Who This Is For
+
+**Technical users working with generative AI** who are:
+- Closer to programming than not
+- Doing complex work that requires thoughtful planning
+- Frustrated with "good enough" outputs from LLMs
+- Wanting more control over their AI-assisted workflows
+
+[Learn more about our audience →](../TARGET-AUDIENCE.md)
+
+## Resources
+
+- **[Vision](../VISION.md)** - The philosophical foundation
+- **[Core Message](../CORE-MESSAGE.md)** - What Kjerneverk is about
+- **[Glossary](../GLOSSARY.md)** - Key concepts and terms
+- **[Tone & Voice](../TONE-VOICE.md)** - How we communicate
 
 ## License
 
@@ -109,3 +151,7 @@ All Kjerneverk projects are licensed under Apache-2.0.
 ## Contributing
 
 Contributions are welcome! Each project has its own repository and contribution guidelines.
+
+---
+
+*This is a passion project, not a company. It exists because this is how I want to work with generative AI.*
