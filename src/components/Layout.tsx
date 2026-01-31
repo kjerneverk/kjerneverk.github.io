@@ -104,7 +104,7 @@ const Layout = ({ docSections }: LayoutProps) => {
                             Built with ❤️ by <a href="https://github.com/tobrien" target="_blank" rel="noopener noreferrer">Tim O'Brien</a>
                         </p>
                         <p className="copyright">
-                            Licensed under Apache-2.0
+                            Licensed under Apache-2.0 | <Link to="/credits">Credits</Link>
                         </p>
                     </div>
                 </footer>

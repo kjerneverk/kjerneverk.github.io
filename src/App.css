@@ -200,7 +200,7 @@ a:hover {
 /* Header Wrapper */
 #header-wrapper {
     background-color: #222;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/bg.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/mountain-range-satellite.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -565,3 +565,257 @@ a:hover {
     display: none;
 }
 
+/* Home Page Styles */
+.home-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.intro-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.intro-section .lead {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects-section {
+    margin-bottom: 4em;
+}
+
+.projects-section > h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+    color: #333;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.project-header h3 {
+    font-size: 1.8em;
+    color: #43b3e0;
+    margin-bottom: 0.25em;
+}
+
+.project-tagline {
+    font-size: 1em;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.project-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    flex-grow: 1;
+}
+
+.project-features h4 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+}
+
+.project-features li {
+    padding: 0.4em 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.project-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #43b3e0;
+    font-weight: bold;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75em;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.project-links .button {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+    padding: 0.6em 1em;
+    font-size: 0.9em;
+}
+
+.button.primary {
+    background-color: #43b3e0;
+    color: #fff !important;
+}
+
+.button.primary:hover {
+    background-color: #4dc0ee;
+}
+
+.button.secondary {
+    background-color: #f0f0f0;
+    color: #333 !important;
+    border: 1px solid #ddd;
+}
+
+.button.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.philosophy-section {
+    margin-bottom: 4em;
+    padding: 3em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    color: #fff;
+}
+
+.philosophy-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+    color: #fff;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.philosophy-item {
+    text-align: center;
+}
+
+.philosophy-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+.philosophy-item p {
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+}
+
+.getting-started-section {
+    text-align: center;
+    padding: 3em;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 2em;
+}
+
+.getting-started-section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.getting-started-section p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 2em auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button.large {
+    padding: 1em 2.5em;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-section h2 {
+        font-size: 1.8em;
+    }
+    
+    .intro-section .lead {
+        font-size: 1em;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .project-links .button {
+        width: 100%;
+    }
+    
+    .philosophy-section {
+        padding: 2em 1.5em;
+    }
+    
+    .getting-started-section {
+        padding: 2em 1em;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .button.large {
+        width: 100%;
+    }
+}

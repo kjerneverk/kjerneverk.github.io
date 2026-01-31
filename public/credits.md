@@ -4,13 +4,13 @@ The design of this documentation site is based on the **Zerofour** template by [
 
 ### Design & Assets
 *   **Original Design:** [Zerofour](https://html5up.net/zerofour) (CC BY 3.0)
-*   **Header Image:** [Snowy mountain range](https://commons.wikimedia.org/wiki/File:Snowy_mountain_range.jpg) by MonikaP (CC0 Public Domain)
+*   **Header Image:** [Gasherbrum Massif, Pakistan](https://commons.wikimedia.org/wiki/File:Gasherbrum_Massif_Pakistan_11Mar2018_SkySat.jpg) - SkySat satellite image by Planet Labs, Inc (CC BY-SA 4.0)
 
-We have adapted the clean, boxy aesthetic and typography to create a focused reading experience for the RiotPlan documentation.
+We have adapted the clean, boxy aesthetic and typography to create a focused reading experience for the Kjerneverk documentation.
 
 ---
 
-RiotPlan itself is built and maintained by [Tim O'Brien](https://github.com/tobrien).
+Kjerneverk projects are built and maintained by [Tim O'Brien](https://github.com/tobrien).
 
 ---
 

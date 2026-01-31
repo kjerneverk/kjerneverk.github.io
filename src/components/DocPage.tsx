@@ -40,7 +40,6 @@ const DocPage = ({ docSections }: DocPageProps) => {
                 setLoading(false)
                 window.scrollTo(0, 0)
             } catch (err) {
-                console.error(err);
                 setError(err instanceof Error ? err.message : 'Unknown error')
                 setLoading(false)
             }
