@@ -31,6 +31,7 @@ coverage
 *.tsbuildinfo
 *~
 .env
-.kodrdriv*
+.kodrdriv/*
+!.kodrdriv/config.yaml
 output/
 package-lock.json
